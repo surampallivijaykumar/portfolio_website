@@ -1,0 +1,21 @@
+GLOBAL MEMBERS:-1)any member which is declared inside a class 
+and out side the any methods or block are called as global members.
+2) the advantages of this global members is ,we can acess
+ them through out the class and out side the class also.
+ 3) for global variables the JVM provides the default values.
+         
+              byte,short,int,long=0
+
+               float,double=0.0
+      
+               char='\u000
+
+               bolean=false
+
+               string=null
+
+  we have two types of global members:-
+  1)STATIC GLOBAL MEMBER:--any global member which is declared
+   using "STATIC" keyword is called STATIC GLOBAL MEMBER .
+  2)NON-STATIC GLOBAL MEMBER:--any global member which is declare 
+  without "NON-STATIC" keyword is called NON-STATIC GLOBAL MEMBER.             

@@ -1,0 +1,157 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.main {
+    position: relative;
+
+
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(bove.jpg);
+    /* background: linear-gradient(to top, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(happy-young-beautiful-woman-with-an-analog-camera-capturing-autumn-HXYHDB.jpg); */
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+}
+
+.icon {
+    position: absolute;
+}
+
+.logo {
+    color: #f7f301;
+    font-family: Arial;
+    font-size: 40px;
+}
+
+.nav {
+    width: 70vw;
+}
+
+.nav ul {
+    height: 40px;
+    list-style: none;
+    margin-left: 240px;
+    margin: right 20px;
+    float: left;
+
+}
+
+.nav ul li {
+    display: flex;
+    float: left;
+    margin-top: 20px;
+    margin-left: 24px;
+}
+
+.nav ul li a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
+.nav ul li a:hover {
+    color: #f7f301;
+}
+
+.Search {
+    float: right;
+    margin-top: 16px;
+    margin-right: 20px;
+}
+
+.Search input {
+    float: left;
+    height: 23px;
+    width: 200px;
+    background: transparent;
+    color: white;
+    border: 1px solid #f7f301;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 4px;
+    font-size: 18px;
+    outline: none;
+}
+
+.Search button {
+    font-size: 18px;
+    height: 32px;
+    font-family: sans-serif;
+    width: 80px;
+    background-color: #f7f301;
+    border: none;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.Search button:hover {
+    background-color: white;
+}
+
+.content {
+    color: white;
+    clear: both;
+    width: 60vw;
+    padding-top: 100px;
+    padding-left: 30px;
+}
+
+.content h1 {
+    font-family: arial;
+    font-size: 34px;
+
+}
+
+.content h1 span {
+    color: #f7f301;
+}
+
+.content h3 {
+    padding-top: 20px;
+    color: cadetblue;
+
+
+}
+
+.btn {
+    width: 100px;
+    height: 27px;
+    font-size: 14px;
+    color: rgba(255, 0, 64, 0.941);
+    background-color: #f7f301;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+
+}
+
+.cn_btn {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.icons {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+.icons ion-icon:hover {
+    color: #f7f301;
+    justify-content: center;
+}

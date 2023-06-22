@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #game {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="game">
+        <button class="btn" onclick="playGame('rock')">Rock</button>
+        <button class="btn" onclick="playGame('paper')">Paper</button>
+        <button class="btn" onclick="playGame('scissors')">Scissors</button>
+    </div>
+    <p id="result"></p>
+    <script>function playGame(userChoice) {
+            var choices = ["rock", "paper", "scissors"];
+            var computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+            var result = "";
+
+            if (userChoice === computerChoice) {
+                result = "It's a tie!";
+            } else if (
+                (userChoice === "rock" && computerChoice === "scissors") ||
+                (userChoice === "paper" && computerChoice === "rock") ||
+                (userChoice === "scissors" && computerChoice === "paper")
+            ) {
+                result = "You win!";
+            } else {
+                result = "Computer wins!";
+            }
+
+            document.getElementById("result").innerHTML = "You chose " + userChoice + ", computer chose " + computerChoice + ". " + result;
+        }</script>
+</body>
+
+</html>

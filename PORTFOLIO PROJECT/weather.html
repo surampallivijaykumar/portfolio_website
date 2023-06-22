@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .weather {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="weather">
+            <h2 id="location"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    <script>// Replace with your desired default values
+        var defaultLocation = 'GUDIMALKAPUR';
+        var defaultTemperature = '36°C';
+        var defaultDescription = 'Sunny';
+
+        // Update weather information
+        function updateWeather(location, temperature, description) {
+            document.getElementById('location').textContent = location;
+            document.getElementById('temperature').textContent = temperature;
+            document.getElementById('description').textContent = description;
+        }
+
+        // On page load
+        window.addEventListener('load', function () {
+            // Update weather information with defaults
+            updateWeather(defaultLocation, defaultTemperature, defaultDescription);
+        });</script>
+</body>
+
+</html>

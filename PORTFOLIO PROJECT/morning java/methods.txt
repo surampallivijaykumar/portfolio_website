@@ -1,0 +1,65 @@
+**************METHOD OVERLOADING******************************
+the process of creating multiple methods with same name,
+but with different formal arguments is called method overloading.
+
+EXAMPLE:-
+class Addition
+{
+    public static void main(String[] args){         OUT PUT:-12.0//
+       add(10,2);
+    }
+     public static void add(byte a,int b){
+       System.out.println("m1:"+(a+b));
+     }
+      public static void add(int a,int b,int c){
+         System.out.println("m2:"+(a+b+c));
+     }
+      public static void add(int a,double b){
+         System.out.println("m3:"+(a+b));
+        
+     }
+      public static void add(float a,double b){
+         System.out.println("m4:"+(a+b))
+        
+     }
+}
+
+1) method overloading does not depend upon access specifier,access 
+modifier,and return type.
+2)it only depends upon method signature,in which name of the method should be
+ same but the arguments should be different.
+3)the main perpose of method over overloading is to provide more flexibility
+  to the user to perform the same operation in different ways.
+ 4)even main method can be overloaded but the jvm calls the main
+  method with string array orguments  
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+ >>>>>>>>>>>>>>>>>>>>>>>>COMPILE TIME BINDING:-
+
+  the bind between the method calling statement and the method implementation based
+   on the actul and formal  arguments is called compile timebinding. 
+   EXAMPLE:-
+   class login
+   {
+      public static void main(String[] args){
+    // login("abc@123.com","123qwerty");
+
+    login(1234567890L,"as33568");
+      }
+       public static void login(String uid,String pwd){
+         System.out.println("login successful foremail" );
+       }
+        public static void login(long uid,String pwd){
+         System.out.println("login successful for mobile );
+       }
+   }
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+   **********FUNCTIONS OF COMPILER**********
+1)compiler checks for syntex(structure of java program).
+2) it is also checks for semantics ( type checking blw actual and formal arguments)
+    based upon this only compile time  binding happens.
+3) compiler adds some default statements like type cast operator for auto widening 
+    , upcasting , auto boxing , and it also adds import statements for "java.lang.*" ,
+    default constructor , super ( ) for every java file.
+
+ -----------------------------------------------------------------------------------------------------------------------------------------------------------   

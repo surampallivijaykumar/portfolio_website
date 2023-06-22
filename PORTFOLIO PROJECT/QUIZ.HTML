@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #quiz-container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #question-container {
+            margin-bottom: 10px;
+        }
+
+        #options-container {
+            margin-bottom: 10px;
+        }
+
+        #submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result-container {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quiz-container">
+        <h1>Quiz Application</h1>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <button id="submit-button" onclick="submitAnswer()">Submit</button>
+        <div id="result-container"></div>
+    </div>
+
+    <script>var currentQuestionIndex = 0;
+        var score = 0;
+
+        var quizData = [
+            {
+                question: "What is the capital of France?",
+                options: ["Paris", "London", "Berlin", "Madrid"],
+                answerIndex: 0
+            },
+            {
+                question: "Who painted the Mona Lisa?",
+                options: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
+                answerIndex: 0
+            },
+            {
+                question: "What is the largest planet in our solar system?",
+                options: ["Jupiter", "Saturn", "Earth", "Uranus"],
+                answerIndex: 0
+            }
+        ];
+
+        var questionContainer = document.getElementById("question-container");
+        var optionsContainer = document.getElementById("options-container");
+        var resultContainer = document.getElementById("result-container");
+
+        function loadQuestion() {
+            var currentQuestion = quizData[currentQuestionIndex];
+
+            questionContainer.textContent = "Question " + (currentQuestionIndex + 1) + ": " + currentQuestion.question;
+
+            optionsContainer.innerHTML = "";
+
+            for (var i = 0; i < currentQuestion.options.length; i++) {
+                var option = document.createElement("button");
+                option.textContent = currentQuestion.options[i];
+                option.setAttribute("data-index", i);
+                option.onclick = selectOption;
+                optionsContainer.appendChild(option);
+            }
+        }
+
+        function selectOption(event) {
+            var selectedOption = event.target;
+            var selectedOptionIndex = parseInt(selectedOption.getAttribute("data-index"));
+
+            var currentQuestion = quizData[currentQuestionIndex];
+            if (selectedOptionIndex === currentQuestion.answerIndex) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizData.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            questionContainer.style.display = "none";
+            optionsContainer.style.display = "none";
+            submitButton.style.display = "none";
+
+            resultContainer.textContent = "You scored " + score + " out of " + quizData.length + "!";
+        }
+
+        loadQuestion();</script>
+</body>
+
+</html>

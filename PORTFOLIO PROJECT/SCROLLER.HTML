@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Slider</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .slider {
+            position: relative;
+            width: 500px;
+            margin: 20px auto;
+        }
+
+        .slides {
+            display: flex;
+            height: 450px;
+            width: 450px;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Slider</h1>
+    <div class="slider">
+        <div class="slides">
+            <img src="./happy-young-beautiful-woman-with-an-analog-camera-capturing-autumn-HXYHDB.jpg" alt="Image 1">
+            <img src="./camera.jpeg" alt="Image 2">
+            <img src="./Princess.jpg" alt="Image 3">
+            <img src="./15.jpg" alt="Image 4">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <script>var slideIndex = 0;
+        var slides = document.getElementsByClassName("slides")[0].getElementsByTagName("img");
+
+        showSlide(slideIndex);
+
+        function changeSlide(n) {
+            showSlide(slideIndex += n);
+        }
+
+        function showSlide(n) {
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            } else if (n >= slides.length) {
+                slideIndex = 0;
+            }
+
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }</script>
+</body>
+
+</html>

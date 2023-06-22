@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #d {
+            margin-top: 100px;
+
+        }
+
+
+
+        input {
+            font-size: x-large;
+
+        }
+
+        #w {
+            color: white;
+            cursor: pointer;
+        }
+
+        #i {
+            color: white;
+            text-align: right;
+            font-size: xxx-large;
+
+        }
+
+        #y {
+            color: white;
+            cursor: pointer;
+        }
+
+        #rgba {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <center>
+        <div id="d"
+            style="height: 430px; width: 250px;border: 5px solid rgba(255, 255, 255, 0.34); border-radius: 20px; background-color: rgb(0, 0, 0);">
+            <br>
+            <form id="f">
+                <input id="i" type="button"
+                    style=" width: 230px; height: 60px; background-color: black; border-radius: 10px;">
+                <br>
+                <br>
+                <input id="rgba" type="button"
+                    style="background-color:rgba(255, 192, 203, 0.789); height: 50px; width: 50px; border-radius:100%;"
+                    value="AC" onclick="f.i.value=''">&nbsp;
+                <input id="rgba" type="button"
+                    style="background-color:rgba(255, 192, 203, 0.789); height: 50px; width: 50px; border-radius:100%;"
+                    value="C" onclick="f.i.value=''">&nbsp;
+                <input id="rgba" type="button"
+                    style="background-color:rgba(255, 192, 203, 0.789); height: 50px; width: 50px; border-radius:100%;"
+                    value="%" onclick="f.i.value+='%'">&nbsp;
+                <input id="y" type="button"
+                    style="background-color: yellowgreen; height: 50px; width: 50px; border-radius:100%;" value="/"
+                    onclick="f.i.value+='/'">
+                <br>
+                <br>
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="7" onclick="f.i.value+='7'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="8" onclick="f.i.value+='8'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="9" onclick="f.i.value+='9'">&nbsp;
+                <input id="y" type="button"
+                    style="background-color: yellowgreen; height: 50px; width: 50px; border-radius:100%;" value="*"
+                    onclick="f.i.value+='*'">
+                <br>
+                <br>
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="4" onclick="f.i.value+='4'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color: rgba(47, 79, 79, 0.777); height: 50px; width: 50px; border-radius:100%;"
+                    value="5" onclick="f.i.value+='5'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color: rgba(47, 79, 79, 0.777); height: 50px; width: 50px; border-radius:100%;"
+                    value="6" onclick="f.i.value+='6'">&nbsp;
+                <input id="y" type="button"
+                    style="background-color:yellowgreen ; height: 50px; width: 50px; border-radius:100%;" value="-"
+                    onclick="f.i.value+='-'">
+                <br>
+                <br>
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="1" onclick="f.i.value+='1'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 50px; border-radius:100%;"
+                    value="2" onclick="f.i.value+='2'">&nbsp;
+                <input id="w" type="button"
+                    style="background-color: rgba(47, 79, 79, 0.777); height: 50px; width: 50px; border-radius:100%;"
+                    value="3" onclick="f.i.value+='3'">&nbsp;
+                <input id="y" type="button"
+                    style="background-color:yellowgreen ; height: 50px; width: 50px; border-radius:100%;" value="+"
+                    onclick="f.i.value+='+'">
+                <br>
+                <br>
+                <input id="w" type="button"
+                    style="background-color:rgba(47, 79, 79, 0.777) ; height: 50px; width: 100px; border-radius:40%;"
+                    value="0" onclick="f.i.value+='0'">&nbsp;
+
+                <input id="w" type="button"
+                    style="background-color: rgba(47, 79, 79, 0.777); height: 50px; width: 50px; border-radius:100%;"
+                    value="." onclick="f.i.value+='.'">&nbsp;
+                <input id="y" type="button"
+                    style="background-color:yellowgreen; height: 50px; width: 50px; border-radius:100%;" value="="
+                    onclick="f.i.value=eval(f.i.value)">
+
+
+
+            </form>
+
+
+        </div>
+    </center>
+</body>
+
+</html>

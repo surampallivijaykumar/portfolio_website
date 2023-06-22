@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        div {
+            width: 50%;
+            height: 300px;
+            border: 1px solid black;
+            border-radius: 100%;
+            position: relative;
+            top: 150px;
+            box-shadow: 10px 10px 10px black;
+            background-image: linear-gradient(yellow, orange, white, red);
+
+        }
+
+        #DAY {
+            font-size: 60px;
+            color: whitesmoke;
+
+        }
+
+        #DATE {
+            font-size: 50px;
+            color: rgb(red, green, rgba(0, 0, 255, 0.904));
+
+        }
+
+        #a {
+
+            color: whitesmoke;
+            background-repeat: repeat;
+
+        }
+    </style>
+</head>
+
+<body onload="clock()">
+
+
+    <center>
+        <div>
+            <h1 id="DAY"></h1>
+            <h1 id="DATE"></h1>
+            <h1 id="TIME"></h1>
+
+        </div>
+    </center>
+    <script>
+        function clock() {
+            var x = new Date()
+            var day = x.getDay()
+            switch (day) {
+                case 0: day = "SUNDAY";
+                    break;
+                case 1: day = "MONDAY";
+                    break;
+                case 2: day = "TUESDAY";
+                    break;
+                case 3: day = "WEDNESDAY";
+                    break;
+                case 4: day = "THURSDAY";
+                    break;
+                case 5: day = "FRIDAY";
+                    break;
+                case 6: day = "SATURDAY";
+                    break;
+
+            }
+            document.getElementById("DAY").innerHTML = (day)
+
+            var dd = x.getDate()
+            var mon = x.getMonth()
+            var yyyy = x.getFullYear()
+            switch (mon) {
+                case 0: mon = "JAN";
+                    break;
+                case 1: mon = "FEB";
+                    break;
+                case 2: mon = "MAR";
+                    break;
+                case 3: mon = "APR";
+                    break;
+                case 4: mon = "MAY";
+                    break;
+                case 5: mon = "JUN";
+                    break;
+                case 6: mon = "JUL";
+                    break;
+                case 7: mon = "AUG";
+                    break;
+                case 8: mon = "SEP";
+                    break;
+                case 9: mon = "OCT";
+                    break;
+                case 10: mon = "NOV";
+                    break;
+                case 11: mon = "DEC";
+                    break;
+            }
+
+            var date = dd + "-" + mon + "-" + yyyy
+
+            document.getElementById("DATE").innerHTML = (date)
+            var hh = x.getHours()
+            var mm = x.getMinutes()
+            var ss = x.getSeconds()
+            var time = hh + ":" + mm + ":" + ss
+            document.getElementById("TIME").innerHTML = (time)
+            setTimeout(function () { clock(), 1000 })
+
+
+        }
+    </script>
+</body>
+
+</html>
